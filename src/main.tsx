@@ -4,6 +4,7 @@ import { RouterProvider } from 'react-router-dom';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+import { Toaster } from '@/components/ui/toaster.tsx';
 import '@/index.css';
 import { router } from '@/router.tsx';
 
@@ -28,6 +29,7 @@ root.render(
     <ChakraUIProvider>
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
+        <Toaster />
       </QueryClientProvider>
     </ChakraUIProvider>
   </StrictMode>,
